@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { FaBarsStaggered, FaX } from "react-icons/fa6";
+import { FaBarsStaggered } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router"; // Ensure you're using react-router-dom
 
 export default function Navbar() {
