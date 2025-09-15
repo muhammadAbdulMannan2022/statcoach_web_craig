@@ -26,10 +26,10 @@ export default function HowToUse() {
   ]);
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-light via-mid-gray/20 to-light">
+    <section className="pt-20 px-4 bg-gradient-to-br from-light via-mid-gray/20 to-light">
       <div className="max-w-7xl mx-auto h-full">
         {/* parent must use items-stretch */}
-        <div className="flex flex-col lg:flex-row items-stretch gap-16 h-full">
+        <div className="flex flex-col-reverse lg:flex-row items-stretch gap-16 h-full">
           {/* left column */}
           <div className="lg:w-1/2 flex flex-col justify-between content-stretch lg:items-start text-center lg:text-left">
             <div className="mb-4">
