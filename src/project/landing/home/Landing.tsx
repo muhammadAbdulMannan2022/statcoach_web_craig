@@ -1,6 +1,7 @@
 import Hero from "./sections/Hero";
 import HowToUse from "./sections/HowToUse";
 import Pricing from "./sections/Pricing";
+import Reviews from "./sections/Reviews";
 
 export default function Landing() {
   return (
@@ -8,6 +9,7 @@ export default function Landing() {
       <Hero />
       <HowToUse />
       <Pricing />
+      <Reviews />
     </div>
   );
 }
