@@ -1,3 +1,4 @@
+import Example from "./sections/Example";
 import Hero from "./sections/Hero";
 import HowToUse from "./sections/HowToUse";
 import Pricing from "./sections/Pricing";
@@ -10,6 +11,7 @@ export default function Landing() {
       <HowToUse />
       <Pricing />
       <Reviews />
+      <Example />
     </div>
   );
 }

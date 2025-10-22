@@ -31,14 +31,14 @@ const reviews = [
     image: "/rv3.jpg",
   },
 ];
-
 function ReviewCard({ review }) {
   return (
-    <div className="flex gap-4 p-6">
+    <div className="flex flex-col sm:flex-row gap-4 p-6">
+      {/* hide on mobile, show from sm+ */}
       <img
         src={review.image}
         alt={review.name}
-        className="w-32 h-32 rounded-lg object-cover flex-shrink-0"
+        className="hidden sm:block w-28 h-28 md:w-32 md:h-32 rounded-lg object-cover flex-shrink-0"
       />
       <div className="flex-1">
         <h3 className="font-semibold text-[#504B63] text-lg">{review.name}</h3>
@@ -52,7 +52,7 @@ function ReviewCard({ review }) {
           title={review.text}
           className="text-sm text-[#696868] leading-relaxed line-clamp-3"
         >
-          " {review.text} "
+          “{review.text}”
         </p>
       </div>
     </div>
@@ -75,8 +75,8 @@ export default function Reviews() {
         </div>
 
         <Swiper
-          slidesPerView={2}
-          spaceBetween={30}
+          slidesPerView={1}
+          spaceBetween={20}
           pagination={{
             clickable: true,
             el: ".swiper-pagination",
@@ -84,11 +84,9 @@ export default function Reviews() {
           modules={[Pagination]}
           className="mySwiper"
           breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            1024: {
+            768: {
               slidesPerView: 2,
+              spaceBetween: 30,
             },
           }}
         >
