@@ -10,12 +10,7 @@ export default function Footer() {
           {/* Logo and Address */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-full border-2 border-green-500 flex items-center justify-center">
-                <span className="text-green-500 font-bold text-lg">S</span>
-              </div>
-              <span className="text-xl font-semibold">
-                StatCoach<span className="text-green-500">Live</span>
-              </span>
+              <img src="/logo.png" className="h-10" />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Villa No. 45, Street 12, Khalifa City,
@@ -33,13 +28,13 @@ export default function Footer() {
               Get started
             </Link>
             <Link
-              to="/privacy-policy"
+              to="/privacy"
               className="text-gray-300 hover:text-green-500 transition-colors duration-200 text-sm"
             >
               Privacy Policy
             </Link>
             <Link
-              to="/reviews"
+              to="/#reviews"
               className="text-gray-300 hover:text-green-500 transition-colors duration-200 text-sm"
             >
               Reviews

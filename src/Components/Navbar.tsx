@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { Link, useLocation, useNavigate } from "react-router"; // Ensure you're using react-router-dom
+import { Link, useLocation, useNavigate } from "react-router";
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -10,8 +10,16 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Handle both path-based and hash-based routes
+    const path = location.pathname === "/" ? "/" : location.pathname.slice(1); // Normalize "/" to match href
     const hash = location.hash || "";
-    setActive(hash);
+
+    // If there's a hash, combine it with the root path for FAQ (e.g., "/#faq")
+    if (hash && path === "/") {
+      setActive(`/${hash}`); // e.g., "/#faq"
+    } else {
+      setActive(path || "/"); // e.g., "pricing" or "/"
+    }
   }, [location]);
 
   useEffect(() => {
@@ -33,15 +41,18 @@ export default function Navbar() {
   }, [isSidebarOpen]);
 
   const navItems = [
-    { name: "Home", href: "" },
+    { name: "Home", href: "/" },
     { name: "Pricing", href: "pricing" },
     { name: "Privacy", href: "privacy" },
-    { name: "FAQ", href: "#faq" },
+    { name: "FAQ", href: "/#faq" }, // Keep as "/#faq" for consistency
   ];
 
   return (
     <>
-      <nav className="sticky top-0 z-50 w-full bg-white" style={{ height: 70 }}>
+      <nav
+        className="sticky top-0 z-50 w-full bg-white shadow"
+        style={{ height: 70 }}
+      >
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
@@ -62,7 +73,7 @@ export default function Navbar() {
               {navItems.map((item) => (
                 <Link
                   key={item.name}
-                  to={`/${item.href}`}
+                  to={item.href}
                   className={`text-sm font-medium px-4 py-2 rounded-full transition-colors ${
                     active === item.href
                       ? "bg-light-green text-white"
@@ -129,7 +140,7 @@ export default function Navbar() {
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
-                    to={`/${item.href}`}
+                    to={item.href}
                     onClick={() => setIsSidebarOpen(false)}
                     className={`block px-3 py-3 rounded-md text-base font-medium transition ${
                       active === item.href

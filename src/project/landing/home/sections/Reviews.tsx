@@ -61,47 +61,50 @@ function ReviewCard({ review }) {
 
 export default function Reviews() {
   return (
-    <section className="w-full py-16 px-4">
-      <div className="max-w-7xl mx-auto relative  pb-10 ">
-        <div className="mb-12">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-[#504B63]">Clients </span>
-            <span className="text-light-green">Reviews</span>
-          </h2>
-          <p className="text-[#696868] max-w-md">
-            Last year, Savilia Blunk took a more conservative approach to her
-            first season as an
-          </p>
-        </div>
+    <>
+      <div id="reviews" className="mb-16"></div>
+      <section className="w-full py-16 px-4">
+        <div className="max-w-7xl mx-auto relative  pb-10 ">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-[#504B63]">Clients </span>
+              <span className="text-light-green">Reviews</span>
+            </h2>
+            <p className="text-[#696868] max-w-md">
+              Last year, Savilia Blunk took a more conservative approach to her
+              first season as an
+            </p>
+          </div>
 
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={20}
-          pagination={{
-            clickable: true,
-            el: ".swiper-pagination",
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-          }}
-        >
-          {reviews.map((review) => (
-            <SwiperSlide key={review.id}>
-              <div className="bg-card rounded-lg border border-gray-200">
-                <ReviewCard review={review} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="flex items-center justify-center my-5">
-          <div className="swiper-pagination"></div>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            pagination={{
+              clickable: true,
+              el: ".swiper-pagination",
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+            }}
+          >
+            {reviews.map((review) => (
+              <SwiperSlide key={review.id}>
+                <div className="bg-card rounded-lg border border-gray-200">
+                  <ReviewCard review={review} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="flex items-center justify-center my-5">
+            <div className="swiper-pagination"></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
