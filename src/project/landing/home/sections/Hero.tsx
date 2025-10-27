@@ -15,7 +15,7 @@ export default function Hero() {
               <h2 className="text-base sm:text-lg lg:text-xl text-dark-gray font-medium">
                 Enhance Team Coordination with Tactical Analysis
               </h2>
-              <button className="bg-light-green hover:bg-green-700 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-full font-semibold flex items-center gap-3 sm:gap-5 transition-colors duration-200 justify-between w-full sm:w-auto">
+              <button className="bg-light-green hover:bg-green-700 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-full font-semibold flex items-center gap-3 sm:gap-5 transition-colors duration-200 justify-between md:w-full w-auto">
                 <span>Get Started Now</span>
                 <span className="bg-dark-green p-1 rounded-full">
                   <ArrowRight className="w-5 h-5" />
