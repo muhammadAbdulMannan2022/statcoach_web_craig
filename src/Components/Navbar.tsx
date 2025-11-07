@@ -43,7 +43,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Pricing", href: "pricing" },
-    { name: "Privacy", href: "privacy" },
+    // { name: "Privacy", href: "privacy" },
     { name: "FAQ", href: "/#faq" }, // Keep as "/#faq" for consistency
   ];
 

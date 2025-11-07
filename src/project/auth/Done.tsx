@@ -1,7 +1,5 @@
 // PasswordSuccess.tsx
 import { CheckCircle } from "lucide-react";
-import { FaArrowLeft } from "react-icons/fa6";
-import { Link } from "react-router";
 
 export default function Success() {
   return (
