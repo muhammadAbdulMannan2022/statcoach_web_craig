@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { AiFillTikTok } from "react-icons/ai";
 
 export default function Footer() {
   return (
@@ -13,9 +14,9 @@ export default function Footer() {
               <img src="/logo.png" className="h-10" />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Villa No. 45, Street 12, Khalifa City,
+              7/10 Yarra St, South Yarra, Victoria 3144
               <br />
-              Abu Dhabi, United Arab Emirates
+              Victoria, Australia
             </p>
           </div>
 
@@ -33,46 +34,50 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
-            <Link
+            {/* <Link
               to="/#reviews"
               className="text-gray-300 hover:text-green-500 transition-colors duration-200 text-sm"
             >
               Reviews
-            </Link>
+            </Link> */}
           </div>
 
           {/* Social Media */}
           <div className="space-y-4 lg:justify-self-end">
             <h3 className="text-sm font-medium text-gray-400">Follow us on</h3>
             <div className="flex space-x-4">
-              <Link
-                to="#"
+              <a
+                href="https://www.facebook.com/profile.php?id=61580711918252"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-500 flex items-center justify-center transition-all duration-200 transform hover:scale-110"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
-              </Link>
-              <Link
-                to="#"
+              </a>
+              <a
+                href="https://www.instagram.com/statcoachlive/"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-500 flex items-center justify-center transition-all duration-200 transform hover:scale-110"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </Link>
-              <Link
-                to="#"
+              </a>
+              <a
+                href="https://www.tiktok.com/@statcoachlive?lang=en"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-500 flex items-center justify-center transition-all duration-200 transform hover:scale-110"
                 aria-label="Twitter"
               >
-                <Twitter className="w-5 h-5" />
-              </Link>
-              <Link
-                to="#"
+                <AiFillTikTok className="w-5 h-5" />
+              </a>
+              <a
+                href=""
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-500 flex items-center justify-center transition-all duration-200 transform hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

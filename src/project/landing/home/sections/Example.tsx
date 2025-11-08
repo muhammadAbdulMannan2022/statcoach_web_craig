@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Parallax, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { RiExternalLinkFill } from "react-icons/ri";
 
 // Define the interface for slide data
 interface Slide {
@@ -20,37 +21,48 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    category: "Football",
-    title:
-      "LIONEL MESSI LEAVING LIGUE 1 TEAM PARIS SAINT-GERMAIN, CLUB CONFIRMS",
+    category: "AFL",
+    title: "Coach Learning Framework",
     description:
-      "The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals",
-    source: "Agence France-Presse",
-    date: "04 June 2023",
-    bgImage:
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1920&h=1080&fit=crop",
+      "Access video resources designed to enhance your knowledge of the fundamental skills of coaching.",
+    source: "play.afl",
+    date: "",
+    hraf: "https://play.afl/coach/resources/coach-learning-framework",
+
+    bgImage: "/d1.webp",
   },
   {
     id: 2,
-    category: "Basketball",
-    title: "NBA FINALS 2024: HISTORIC CHAMPIONSHIP WIN BREAKS RECORDS",
+    category: "AFL",
+    title: "Meet the not-so-familiar faces in your club's coaches' box",
     description:
-      "An unprecedented victory that showcases the evolution of modern basketball and team dynamics",
-    source: "Sports Network",
-    date: "15 June 2024",
-    bgImage:
-      "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1920&h=1080&fit=crop",
+      "FROM assistants to analysts to coaching directors, AFL coaches' boxes are a wealth of information.",
+    source: "afl.com.au",
+    date: "",
+    hraf: "https://www.afl.com.au/news/1325829/who-sits-in-your-clubs-coaches-box",
+    bgImage: "/d2.webp",
   },
   {
     id: 3,
-    category: "Tennis",
-    title: "WIMBLEDON CHAMPIONSHIP: NEW CHAMPION EMERGES IN THRILLING FINAL",
+    category: "AFL (Skills)",
+    title: "Coach Skills Series",
     description:
-      "Five-set thriller captivates audiences worldwide as underdog claims prestigious title",
-    source: "International Sports",
-    date: "16 July 2024",
-    bgImage:
-      "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1920&h=1080&fit=crop",
+      "Short clips to help coach skills including handballing, marking, kicking and groundballs.",
+    source: "play.afl",
+    date: "",
+    hraf: "https://play.afl/learning-resource/coaches/skills-series",
+    bgImage: "/d3.webp",
+  },
+  {
+    id: 4,
+    category: "AFL ",
+    title: "COACH ACCREDITATION (CoachAFL)",
+    description:
+      "The CoachAFL portal, is the home to all Coach Development resources and support for Australian Rules coaches across the nation. The platform features the following tools, to allow community coaches to continue to develop and enhance their coaching skillset",
+    source: "wafc.com.au",
+    date: "",
+    hraf: "https://wafc.com.au/coaches/coaching-resources",
+    bgImage: "/d4.png",
   },
 ];
 
@@ -103,15 +115,20 @@ const Slider: React.FC = () => {
 
                       {/* Meta Info */}
                       <div
-                        className="text-white/90 text-xs sm:text-sm mb-3 sm:mb-4"
+                        className="text-white/90  mb-3 sm:mb-4 flex items-center gap-3"
                         data-swiper-parallax="-200"
                       >
-                        {slide.source} • {slide.date}
+                        <span className="text-xs sm:text-sm">
+                          {slide.source}{" "}
+                        </span>
+                        <a href={slide.hraf} target="_blank">
+                          <RiExternalLinkFill width={10} height={10} />
+                        </a>
                       </div>
 
                       {/* Title */}
                       <h1
-                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight line-clamp-2"
                         data-swiper-parallax="-300"
                       >
                         {slide.title}
@@ -119,7 +136,7 @@ const Slider: React.FC = () => {
 
                       {/* Description */}
                       <p
-                        className="text-white/90 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed"
+                        className="text-white/90 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed line-clamp-4"
                         data-swiper-parallax="-400"
                       >
                         {slide.description}

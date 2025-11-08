@@ -67,8 +67,8 @@ export default function Reviews() {
         <div className="max-w-7xl mx-auto relative  pb-10 ">
           <div className="mb-12">
             <h2 className="text-4xl font-bold mb-4">
-              <span className="text-[#504B63]">Clients </span>
-              <span className="text-light-green">Reviews</span>
+              <span className="text-[#504B63]">Clubs </span>
+              <span className="text-light-green"> We Work With</span>
             </h2>
             <p className="text-[#696868] max-w-md">
               Last year, Savilia Blunk took a more conservative approach to her
@@ -85,6 +85,7 @@ export default function Reviews() {
             }}
             modules={[Pagination]}
             className="mySwiper"
+            loop={true}
             breakpoints={{
               768: {
                 slidesPerView: 2,
