@@ -56,7 +56,7 @@ const slides: Slide[] = [
 
 const Slider: React.FC = () => {
   return (
-    <div className="flex items-center justify-center mb-10  px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-center mb-10  px-4 sm:px-6 lg:px-8 mt-20">
       <div className="w-full max-w-7xl relative rounded-3xl shadow">
         <Swiper
           modules={[Navigation, Parallax, Autoplay]}

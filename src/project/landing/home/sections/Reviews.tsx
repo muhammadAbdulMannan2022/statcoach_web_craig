@@ -62,8 +62,8 @@ function ReviewCard({ review }) {
 export default function Reviews() {
   return (
     <>
-      <div id="reviews" className="mb-16"></div>
-      <section className="w-full py-16 px-4">
+      <div id="reviews" className="mb-16 "></div>
+      <section className="w-full py-16 px-4 bg-gradient-to-t from-[#F4F6FB] via-white to-[#F4F6FB]">
         <div className="max-w-7xl mx-auto relative  pb-10 ">
           <div className="mb-12">
             <h2 className="text-4xl font-bold mb-4">

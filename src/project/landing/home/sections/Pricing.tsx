@@ -54,7 +54,7 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py-20 px-4 bg-gradient-to-t from-[#F4F6FB] via-white to-[#F4F6FB]"
+      className="py-20 px-4 bg-gradient-to-t from-[#ffffff] via-white to-[#ffffff]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
