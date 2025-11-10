@@ -103,7 +103,7 @@ const Slider: React.FC = () => {
                 />
 
                 {/* Content */}
-                <div className="relative h-full flex items-center">
+                <div className="relative h-full flex items-end">
                   <div className="container mx-auto px-4 sm:px-6 lg:px-16 max-w-7xl">
                     <div className="max-w-3xl">
                       {/* Category Badge */}

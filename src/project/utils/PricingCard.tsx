@@ -8,6 +8,7 @@ interface PricingCardProps {
   buttonText?: string;
   onButtonClick?: () => void;
   popular?: boolean;
+  gstNote?: string;
 }
 
 export function PricingCard({
@@ -20,6 +21,7 @@ export function PricingCard({
   buttonText = "Try now",
   onButtonClick,
   popular = false,
+  gstNote,
 }: PricingCardProps) {
   return (
     <div
