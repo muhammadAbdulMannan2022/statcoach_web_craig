@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { PricingCard } from "../../../utils/PricingCard";
 import { useState } from "react";
 

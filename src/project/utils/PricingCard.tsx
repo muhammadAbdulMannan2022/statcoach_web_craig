@@ -72,6 +72,7 @@ export function PricingCard({
             <span className="text-sm text-gray-500"> / {duration}</span>
           )}
         </p>
+        <p className="text-sm text-dark-gray mb-3">{gstNote}</p>
 
         <button
           onClick={onButtonClick}

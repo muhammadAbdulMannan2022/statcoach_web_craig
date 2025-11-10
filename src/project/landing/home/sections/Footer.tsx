@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { AiFillTikTok } from "react-icons/ai";
 
 export default function Footer() {
